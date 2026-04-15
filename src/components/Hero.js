@@ -71,7 +71,7 @@ export default function Hero() {
 
       {/* Trust line */}
       <p className="relative z-10 mt-8 text-xs text-neutral-500 tracking-wider">
-        $2M+ UNDER MANAGEMENT  •  $1M+ PERSONALLY CLOSED  •  RESULTS BELOW
+        $2M+ UNDER MANAGEMENT  •  $1.3M PERSONALLY CLOSED IN 2025  •  RESULTS BELOW
       </p>
     </section>
   );
