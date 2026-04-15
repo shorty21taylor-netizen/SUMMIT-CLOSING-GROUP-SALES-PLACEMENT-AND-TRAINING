@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" aria-label="Summit Closing Group">
-  <rect width="600" height="600" fill="#000000"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" aria-label="Summit Closing Group">
+  <rect width="1600" height="1200" fill="#000000"/>
   <!-- Outer triangle -->
-  <path d="M 300 90 L 520 460 L 80 460 Z"
+  <path d="M 800 180 L 1080 820 L 520 820 Z"
+        fill="none" stroke="#ffffff" stroke-width="28" stroke-linejoin="miter"/>
+  <!-- Inner triangle with mountain notch -->
+  <path d="M 800 320 L 970 770 L 895 770 L 845 700 L 800 770 L 630 770 Z"
         fill="none" stroke="#ffffff" stroke-width="22" stroke-linejoin="miter"/>
-  <!-- Inner triangle with mountain notch on the right -->
-  <path d="M 300 190 L 430 410 L 370 410 L 335 355 L 305 410 L 170 410 Z"
-        fill="none" stroke="#ffffff" stroke-width="16" stroke-linejoin="miter"/>
   <!-- Wordmark -->
-  <text x="300" y="545" font-family="Inter, Arial, Helvetica, sans-serif"
-        font-weight="700" font-size="46" fill="#ffffff" text-anchor="middle"
-        letter-spacing="5">SUMMIT CLOSING GROUP</text>
+  <text x="800" y="1080" font-family="Inter, Arial, Helvetica, sans-serif"
+        font-weight="700" font-size="92" fill="#ffffff" text-anchor="middle"
+        letter-spacing="6">SUMMIT CLOSING GROUP</text>
 </svg>

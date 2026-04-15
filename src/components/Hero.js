@@ -18,10 +18,10 @@ export default function Hero() {
         <Image
           src="/logo.svg"
           alt="Summit Closing Group"
-          width={280}
-          height={210}
+          width={400}
+          height={300}
           priority
-          className="w-[200px] md:w-[260px] h-auto"
+          className="w-[240px] md:w-[320px] h-auto"
         />
       </motion.div>
 
