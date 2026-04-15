@@ -5,23 +5,25 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-black overflow-hidden">
-      {/* Subtle red radial glow behind logo */}
-      <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-red-600/20 rounded-full blur-[120px] pointer-events-none" />
+      {/* Red radial glow — moved DOWN behind the headline, not the logo */}
+      <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-600/25 rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Logo */}
+      {/* Logo — uses mix-blend-screen so the black bg of the PNG vanishes into the page */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative z-10 mb-12"
+        className="relative z-10 mb-10"
+        style={{ mixBlendMode: 'screen' }}
       >
         <Image
           src="/logo.png"
           alt="Summit Closing Group"
-          width={1536}
-          height={1024}
+          width={1600}
+          height={1200}
           priority
-          className="w-[280px] md:w-[380px] h-auto"
+          quality={100}
+          className="w-[320px] md:w-[420px] lg:w-[480px] h-auto"
         />
       </motion.div>
 
