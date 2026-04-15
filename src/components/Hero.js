@@ -16,12 +16,12 @@ export default function Hero() {
         className="relative z-10 mb-12"
       >
         <Image
-          src="/logo.svg"
+          src="/logo.png"
           alt="Summit Closing Group"
-          width={400}
-          height={300}
+          width={1536}
+          height={1024}
           priority
-          className="w-[240px] md:w-[320px] h-auto"
+          className="w-[280px] md:w-[380px] h-auto"
         />
       </motion.div>
 
