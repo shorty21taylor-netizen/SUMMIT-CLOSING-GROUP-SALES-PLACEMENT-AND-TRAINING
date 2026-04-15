@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         display: ["'Bebas Neue'", "Impact", "sans-serif"],
+        bebas: ['"Bebas Neue"', "Impact", "sans-serif"],
       },
       boxShadow: {
         redglow: "0 0 40px rgba(220, 38, 38, 0.45)",

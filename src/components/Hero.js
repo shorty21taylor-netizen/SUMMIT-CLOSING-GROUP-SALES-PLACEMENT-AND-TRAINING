@@ -1,71 +1,76 @@
-"use client";
-
-import { motion } from "framer-motion";
+'use client';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden">
-      <div className="relative mb-10">
-        <div className="pulse-ring" aria-hidden="true" />
-        <img
-          src="/logo.png"
-          alt="Summit Closing Group"
-          className="relative z-10 w-[120px] h-auto mx-auto"
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
-        />
-      </div>
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-black overflow-hidden">
+      {/* Subtle red radial glow behind logo */}
+      <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-red-600/20 rounded-full blur-[120px] pointer-events-none" />
 
-      <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="display uppercase text-[44px] leading-[0.95] sm:text-[64px] md:text-[78px] lg:text-[92px] max-w-5xl tracking-tight"
-      >
-        We place closers in your business.
-        <br />
-        <span className="text-scgred">Or we train your whole damn team.</span>
-      </motion.h1>
-
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        className="mt-8 max-w-[600px] text-[18px] text-scgoff leading-relaxed"
-      >
-        Done-for-you sales talent + fractional sales management for 7-figure
-        coaches, agencies, and info businesses. Backed by a 90-day replacement
-        guarantee.
-      </motion.p>
-
+      {/* Logo */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        className="mt-10 flex flex-col sm:flex-row gap-4"
+        transition={{ duration: 0.6 }}
+        className="relative z-10 mb-12"
       >
-        <button onClick={() => scrollTo("offer-one")} className="btn-red">
-          Place a Closer →
-        </button>
-        <button onClick={() => scrollTo("offer-two")} className="btn-outline">
-          Get Sales Management →
-        </button>
+        <Image
+          src="/logo.svg"
+          alt="Summit Closing Group"
+          width={280}
+          height={210}
+          priority
+          className="w-[200px] md:w-[260px] h-auto"
+        />
       </motion.div>
 
+      {/* Headline */}
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="relative z-10 text-center font-bebas tracking-tight leading-[0.95] text-white text-5xl md:text-7xl lg:text-8xl max-w-5xl"
+      >
+        WE PLACE CLOSERS IN YOUR BUSINESS.<br />
+        <span className="text-red-600">OR WE TRAIN YOUR WHOLE DAMN TEAM.</span>
+      </motion.h1>
+
+      {/* Subhead */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        className="mt-8 text-sm text-scgoff/70"
+        transition={{ duration: 0.7, delay: 0.4 }}
+        className="relative z-10 mt-8 text-center text-neutral-300 text-base md:text-lg max-w-2xl"
       >
-        $2M+ under management. $1M+ personally closed. Results below.
+        Done-for-you sales talent + fractional sales management for 7-figure coaches, agencies, and info businesses. Backed by a 90-day replacement guarantee.
       </motion.p>
+
+      {/* CTAs */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.6 }}
+        className="relative z-10 mt-10 flex flex-col sm:flex-row gap-4"
+      >
+        <a
+          href="#offer-one"
+          className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold tracking-wide transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(220,38,38,0.5)]"
+        >
+          PLACE A CLOSER →
+        </a>
+        <a
+          href="#offer-two"
+          className="px-8 py-4 border-2 border-white text-white font-bold tracking-wide hover:bg-white hover:text-black transition-all hover:scale-[1.02]"
+        >
+          GET SALES MANAGEMENT →
+        </a>
+      </motion.div>
+
+      {/* Trust line */}
+      <p className="relative z-10 mt-8 text-xs text-neutral-500 tracking-wider">
+        $2M+ UNDER MANAGEMENT  •  $1M+ PERSONALLY CLOSED  •  RESULTS BELOW
+      </p>
     </section>
   );
 }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" aria-label="Summit Closing Group">
+  <rect width="600" height="600" fill="#000000"/>
+  <!-- Outer triangle -->
+  <path d="M 300 90 L 520 460 L 80 460 Z"
+        fill="none" stroke="#ffffff" stroke-width="22" stroke-linejoin="miter"/>
+  <!-- Inner triangle with mountain notch on the right -->
+  <path d="M 300 190 L 430 410 L 370 410 L 335 355 L 305 410 L 170 410 Z"
+        fill="none" stroke="#ffffff" stroke-width="16" stroke-linejoin="miter"/>
+  <!-- Wordmark -->
+  <text x="300" y="545" font-family="Inter, Arial, Helvetica, sans-serif"
+        font-weight="700" font-size="46" fill="#ffffff" text-anchor="middle"
+        letter-spacing="5">SUMMIT CLOSING GROUP</text>
+</svg>
