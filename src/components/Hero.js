@@ -19,11 +19,12 @@ export default function Hero() {
         <Image
           src="/logo.png"
           alt="Summit Closing Group"
-          width={1600}
-          height={1200}
+          width={1536}
+          height={1024}
           priority
           quality={100}
-          className="w-[320px] md:w-[420px] lg:w-[480px] h-auto"
+          sizes="(max-width: 768px) 480px, (max-width: 1024px) 640px, 800px"
+          className="w-[480px] md:w-[640px] lg:w-[800px] h-auto"
         />
       </motion.div>
 
