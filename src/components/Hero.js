@@ -8,13 +8,12 @@ export default function Hero() {
       {/* Red radial glow — moved DOWN behind the headline, not the logo */}
       <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-600/25 rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Logo — uses mix-blend-screen so the black bg of the PNG vanishes into the page */}
+      {/* Logo */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="relative z-10 mb-10"
-        style={{ mixBlendMode: 'screen' }}
       >
         <Image
           src="/logo.png"
