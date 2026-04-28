@@ -24,6 +24,13 @@ const tiers = [
     href: "https://buy.stripe.com/REPLACE_REP3",
     popular: false,
   },
+  {
+    name: "Sales Manager",
+    price: "$2,000",
+    desc: "Experienced sales manager placed to lead and scale your closer team.",
+    href: "https://buy.stripe.com/REPLACE_SM",
+    popular: false,
+  },
 ];
 
 export default function OfferOne() {
@@ -52,7 +59,7 @@ export default function OfferOne() {
           them, we replace them free.
         </motion.p>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {tiers.map((t, i) => (
             <motion.div
               key={t.name}
